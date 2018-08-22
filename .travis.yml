@@ -1,0 +1,14 @@
+language: ruby
+cache:
+- bundler
+before_script:
+- bundle exec rake db:create
+- bundle exec rake db:migrate
+- bundle exec rake assets:precompile
+deploy:
+  provider: heroku
+  api_key:
+    secure: "BTwsnnQqbjmmP+y+6J3Qo6fbXSj/x0ro280R406N4B5i+hQdybXzU4yhkYc9WiF2/PO/EsNrMvaQ+awXuAAUZADm5SZVWIQFHzALifAQef4RAbH13T+XWTgqZGqowWBQs1ib6VspW2vBWZGLHRwhOlOEN8VhoFVvTHBUVxboSpiAKkVs9Eb/64nawfNy2cc2QGY4+0HGwDgjbWQWEfNSRZpCcjJ4/hGCaWJzpuQgZ2JXxi3623GyNEtDLa1txHoZOSWQVqCXF0wDmjQSzqVkypARUlc1a7hdXzEhnp+XT9jm6r/YSiYjz4+VPeLE+F6/w8XImQITTjYlzYHl0B2mIhJq/gQSu9dtV61W75Z8gY7ozMQDWUuILW9+XuQJEVf2bqDCOVwR0bkShQYrlD3RBzYwpDzW4JFnJ301w2nuHAqhKHtxwD80F7J3vSsLOPG6fNRLB7gqnHW8RhBrpdh19JMvM+HpNimJpm8xUHfdHUwSr9kCfbZOe/LwYnsCRieIZ3t5nF0EWAuMKWF9QGk+jzzCyyDNCW8Lq5sT1ZWHcN//rvXZfBLxGXA0YybcQ4aKJixalRR4YcQulKsHlGGc8w5cnkTDUQjGHeriV8svLoBxOFfrcPHZ9Tva0KA1pfbqTIIEOmJK5UrTYY0sAz+vH7o0YFRn/espV0H19HuAHmY="
+  app: rails-test-app-article
+  on:
+    repo: felipeluizsoares/rails-test-app
