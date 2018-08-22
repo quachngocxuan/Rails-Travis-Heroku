@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/quachngocxuan/Rails-Travis-Heroku.svg?branch=master)](https://travis-ci.org/quachngocxuan/Rails-Travis-Heroku)
+
 # README
 
 This README would normally document whatever steps are necessary to get the
